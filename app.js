@@ -1,27 +1,17 @@
-function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    var B = A.sort(function(a,b){return a - b});
-    var len = A.length;
-    var i = len-1;
-    var pdt;
-    
-    if(B[0] < 0 && B[1] > 0 ){
-        pdt = B[i] * B[i-1] * B[i-2];
-        return pdt;
-    }else if( B[i] < 0){
-        pdt = B[i] * B[i-1] * B[i-2];
-            return pdt;
-    }else if(B[0] < 0 && B[1] < 0){
-        if(Math.abs(B[0]*B[1]*B[i]) > Math.abs(B[i]*B[i-1]*B[i-2]) ){
-            pdt = B[0] * B[1] * B[i];
-            return pdt;
-        }else{
-            pdt = B[i] * B[i-1] * B[i-2];
-            return pdt;
-        }
-    
-    }else{
-        pdt = B[i] * B[i-1] * B[i-2];
-            return pdt;
-    }
+const maxProduct = (N) => {
+    if(!(Array.isArray(N))) return null;
+    if(N.length < 3) return null;
+    let sortedArray = N.sort((a,b) => (a-b));
+    let length = N.length;
+    let product = 1;
+    for(let i = 0; i < length-1; i++){
+        if(isNaN(sortedArray[i])) return product = null;
+    }    
+    for(let i = length - 1; i > length - 4; i-- ){  
+        product = product * sortedArray[i];        
+    }    
+    return product; 
 }
+maxProduct([2,3,'edgar', 5, 6, 3])
+
+module.exports = maxProduct;

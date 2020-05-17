@@ -1,0 +1,31 @@
+{
+  "name": "maximum-product-of-three-numbers-in-an-array",
+  "version": "1.0.0",
+  "description": "maximum product of triplets in an array",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edgar256/Maximum-Product-of-Three-Numbers-in-an-Array.git"
+  },
+  "keywords": [
+    "maximum",
+    "product",
+    "of",
+    "triplets",
+    "in",
+    "an",
+    "array"
+  ],
+  "author": "Edgar Tinkamanyire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edgar256/Maximum-Product-of-Three-Numbers-in-an-Array/issues"
+  },
+  "homepage": "https://github.com/Edgar256/Maximum-Product-of-Three-Numbers-in-an-Array#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
